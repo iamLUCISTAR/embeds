@@ -1,21 +1,223 @@
-.App {
-  text-align: center;
-  font-family: Arial, sans-serif;
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-button {
-  margin: 10px;
-  padding: 10px 20px;
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  padding: 20px;
+}
+
+/* App Container */
+.App {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Input and Button Styling */
+.input-container {
+  margin-bottom: 30px;
+}
+
+.embed-options {
+  margin-bottom: 20px;
+}
+
+.embed-options button {
+  background-color: #f0f0f0;
+  padding: 12px 25px;
   font-size: 16px;
   cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 0 5px;
+  transition: all 0.3s ease;
 }
 
-input[type="file"] {
-  margin: 10px;
+.embed-options button.active {
+  background-color: #5e7dff;
+  color: white;
 }
 
+.embed-options button:hover {
+  background-color: #ddd;
+}
+
+/* Input and File Upload Styling */
 input[type="text"] {
   padding: 10px;
   font-size: 16px;
-  width: 300px;
+  width: 80%;
+  margin: 10px 0;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+}
+
+input[type="file"] {
+  background-color: #f7f7f7;
+  border: 2px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  width: 80%;
+  margin: 10px 0;
+}
+
+/* Button Styling */
+button {
+  background-color: #5e7dff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #4a68e1;
+}
+
+button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+/* Preview Section */
+.preview-section {
+  margin-top: 20px;
+}
+
+iframe {
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  height: 800px;
+}
+
+.actions {
+  margin-top: 20px;
+}
+
+.actions button {
+  background-color: #5e7dff;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.actions button:hover {
+  background-color: #4a68e1;
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  padding: 20px;
+}
+
+/* Landing Page Styles */
+.landing-page {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.landing-page h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.landing-page p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.get-started-btn {
+  background-color: #5e7dff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.get-started-btn:hover {
+  background-color: #4a68e1;
+}
+
+.landing-buttons {
+  display: flex;
+  flex-direction: column; /* Stacks the buttons one below the other */
+  gap: 10px; /* Adds spacing between buttons */
+  align-items: center; /* Centers the buttons horizontally */
+}
+
+.get-started-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  width: 200px; /* Optional: set a fixed width for the buttons */
+}
+
+.get-started-btn:hover {
+  background-color: #45a049;
 }
