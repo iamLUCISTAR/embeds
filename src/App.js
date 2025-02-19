@@ -5,6 +5,7 @@ import ImageEmbedder from "./components/ImageEmbedder";
 import GoogleSheetsEmbedder from "./components/GoogleSheetsEmbedder";
 import LandingPage from "./components/LandingPage";
 import GoogleDocumentEmbedder from "./components/GoogleDocEmbedder";
+import WordDocumentEmbedder from "./components/WordDocumentEmbedder";
 import './App.css';
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/embed-image" element={<ImageEmbedder />} />
         <Route path="/embed-google-sheet" element={<GoogleSheetsEmbedder />} />
         <Route path="/embed-google-doc" element={<GoogleDocumentEmbedder />} />
+        <Route path="/embed-word-doc" element={<WordDocumentEmbedder />} />
       </Routes>
     </Router>
   );

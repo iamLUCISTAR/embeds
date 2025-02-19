@@ -20,16 +20,23 @@ const PDFEmbedder = () => {
   };
 
   const handleLinkSubmit = () => {
-    const isGoogleDriveLink = pdfLink.includes("drive.google.com");
-    if (isGoogleDriveLink) {
+    if (pdfLink.includes("drive.google.com")) {
       const fileId = extractGoogleDriveFileId(pdfLink);
       if (fileId) {
-        const googleDriveEmbedLink = `https://drive.google.com/file/d/${fileId}/preview`;
-        setPdfFile(googleDriveEmbedLink);
+        setPdfFile(`https://drive.google.com/file/d/${fileId}/preview`);
         setError("");
         setIsLinkMode(true);
       } else {
         setError("Unable to extract file ID from the Google Drive link.");
+      }
+    } else if (pdfLink.includes("onedrive.live.com")) {
+      const embedLink = convertOneDriveLink(pdfLink);
+      if (embedLink) {
+        setPdfFile(embedLink);
+        setError("");
+        setIsLinkMode(true);
+      } else {
+        setError("Unable to extract file from the OneDrive link.");
       }
     } else {
       setPdfFile(pdfLink);
@@ -42,6 +49,13 @@ const PDFEmbedder = () => {
     const regex = /(?:https:\/\/drive\.google\.com\/.*?\/d\/)([^\/]+)/;
     const match = link.match(regex);
     return match ? match[1] : null;
+  };
+
+  const convertOneDriveLink = (link) => {
+    if (link.includes("onedrive.live.com")) {
+      return link.replace("redir?resid=", "embed?resid=").replace("&authkey=", "&em=2");
+    }
+    return null;
   };
 
   const openPDFInNewWindow = () => {

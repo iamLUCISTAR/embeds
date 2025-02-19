@@ -19,6 +19,9 @@ const LandingPage = () => {
         <Link to="/embed-google-doc">
             <button className="get-started-btn">Embed Google Docs</button>
         </Link>
+        {/* <Link to="/embed-word-doc">
+            <button className="get-started-btn">Embed Word Doc</button>
+        </Link> */}
       </div>
     </div>
   );
